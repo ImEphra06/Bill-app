@@ -45,6 +45,7 @@ export default class {
               // if for some reason, corrupted data was introduced, we manage here failing formatDate function
               // log the error and return unformatted date in that case
               console.log(e,'for',doc)
+              this.displayErrorMessage('Some bills could not be formatted correctly.')
               return {
                 ...doc,
                 date: doc.date,
